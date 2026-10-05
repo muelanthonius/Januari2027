@@ -69,13 +69,13 @@ ${a.join(`
   "meta": {
     "id": "hm-base-16w-2026-10-05",
     "athlete": "Samuel",
-    "event": "Base Building 16 Minggu: Menuju HM Sub 1:45 (BTN JAKIM 2027)",
-    "eventDate": "2027-01-24",
-    "planStartDate": "2026-10-05",
-    "planEndDate": "2027-01-24",
+    "event": "Base Building 18 Minggu: W1 pasca-HM selesai + Race 10K 15 Nov + Menuju HM Sub 1:45 (BTN JAKIM 2027)",
+    "eventDate": "2027-01-30",
+    "planStartDate": "2026-09-28",
+    "planEndDate": "2027-01-31",
     "createdAt": "2026-09-29T07:40:00Z",
-    "updatedAt": "2026-09-29T07:40:00Z",
-    "totalWeeks": 16,
+    "updatedAt": "2026-10-05T05:50:00Z",
+    "totalWeeks": 18,
     "generatedBy": "Claude Coach"
   },
   "preferences": {
@@ -122,7 +122,7 @@ ${a.join(`
     "constraints": [
       "Long run hari Sabtu",
       "5 hari lari + 1-2 hari ST per minggu",
-      "Tidak ada race di tengah blok; BTN JAKIM 2027 perkiraan Jun-Jul 2027 (jadwal belum keluar)",
+      "Race 10K 15 Nov 2026 (W7) di tengah blok; BTN JAKIM 2027 perkiraan Jun-Jul 2027 (jadwal belum keluar)",
       "Panas & lembap Bekasi/Jakarta"
     ]
   },
@@ -179,14 +179,14 @@ ${a.join(`
     {
       "name": "Base",
       "startWeek": 1,
-      "endWeek": 4,
+      "endWeek": 3,
       "focus": "Pemulihan pasca-HM & fondasi aerobik",
       "weeklyHoursRange": {
-        "low": 4.0,
+        "low": 3.9,
         "high": 6.0
       },
       "weeklyKmRange": {
-        "low": 29.0,
+        "low": 34.0,
         "high": 46.1
       },
       "keyWorkouts": [
@@ -202,33 +202,33 @@ ${a.join(`
     },
     {
       "name": "Build",
-      "startWeek": 5,
-      "endWeek": 8,
-      "focus": "Threshold & VO2max di atas volume 50-57 km",
+      "startWeek": 4,
+      "endWeek": 10,
+      "focus": "Threshold & VO2max di atas volume 50-57 km + race 10K (W7)",
       "weeklyHoursRange": {
-        "low": 5.2,
+        "low": 4.6,
         "high": 6.8
       },
       "weeklyKmRange": {
-        "low": 41.5,
+        "low": 34.9,
         "high": 56.8
       },
       "keyWorkouts": [
-        "Threshold 4-5 x 2 km",
-        "VO2max 800-1000 m",
-        "Long run 18-20 km + latihan fuel",
-        "5K TT (W8)"
+        "Gladi pace 3 x 3 km (W6)",
+        "Race 10K 15 Nov (W7)",
+        "Cruise intervals & VO2max 800-1000 m",
+        "Long run 18-20 km + latihan fuel"
       ],
       "physiologicalGoals": [
         "Turunkan pace threshold ke ~4:50/km",
-        "Naikkan VO2max",
+        "Race 10K sub-48:00 (rencana B 48:30-49:00)",
         "Latih perut untuk 55 g karbo/jam"
       ]
     },
     {
       "name": "Specific",
-      "startWeek": 9,
-      "endWeek": 12,
+      "startWeek": 11,
+      "endWeek": 14,
       "focus": "Daya tahan spesifik HM",
       "weeklyHoursRange": {
         "low": 5.5,
@@ -251,8 +251,8 @@ ${a.join(`
     },
     {
       "name": "Peak",
-      "startWeek": 13,
-      "endWeek": 16,
+      "startWeek": 15,
+      "endWeek": 18,
       "focus": "Puncak volume + benchmark",
       "weeklyHoursRange": {
         "low": 4.2,
@@ -265,13 +265,24 @@ ${a.join(`
       "keyWorkouts": [
         "Threshold 3 x 4 km",
         "Long run 22-24 km dengan blok HM",
-        "10K TT (W16)"
+        "10K TT (W18)"
       ],
       "physiologicalGoals": [
         "Konsolidasi pace HM",
         "Validasi fitness lewat 10K TT",
         "Siap masuk blok spesifik BTN JAKIM 2027"
       ]
+    }
+  ],
+  "races": [
+    {
+      "name": "Race 10K",
+      "date": "2026-11-15",
+      "weekNumber": 7,
+      "distanceKm": 10,
+      "target": "sub-48:00 (4:47/km)",
+      "planB": "48:30-49:00 (4:51-4:54/km)",
+      "goNoGo": "W6 Selasa 3 Nov: 3 x 3 km @ 4:48-4:50, selisih antar-repetisi ≤3 detik, HR rep 3 ≤176"
     }
   ],
   "adjustmentRules": [
@@ -292,12 +303,16 @@ ${a.join(`
       "action": "Mulai lagi dari volume ±50% dan naik ±10-15% km per minggu (mirip W2-W3). Tentukan ulang pace lewat 5K TT sebelum kembali ke sesi threshold/pace HM."
     },
     {
-      "situation": "Libur jatuh di minggu deload (W4/W8/W12/W16)",
+      "situation": "Libur jatuh di minggu deload (W5/W10/W14/W18)",
       "action": "Anggap deload sudah terjadi. Lanjut ke minggu berikutnya tanpa menggeser kalender."
     },
     {
-      "situation": "Libur di 4 minggu terakhir (W13-W16)",
+      "situation": "Libur di 4 minggu terakhir (W15-W18)",
       "action": "Jangan menggeser kalender. Potong VO2max lebih dulu, pertahankan long run dan threshold dengan volume dikurangi."
+    },
+    {
+      "situation": "Sakit atau cedera dalam 7 hari sebelum race 10K (15 Nov)",
+      "action": "Jangan memaksa race. Ganti dengan easy run saja, kembali ke W8 setelah pulih, dan jangan mengganti race dengan time trial dalam 7 hari setelah sembuh."
     },
     {
       "situation": "Sakit",
@@ -307,90 +322,20 @@ ${a.join(`
   "weeks": [
     {
       "weekNumber": 1,
-      "startDate": "2026-10-05",
-      "endDate": "2026-10-11",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-04",
       "phase": "Base",
-      "focus": "Pemulihan pasca-HM: semua lari Zone 1-2, tanpa intensitas (±29 km, ±4 jam)",
-      "targetHours": 4.0,
-      "targetKm": 29.0,
+      "focus": "Pemulihan pasca-HM: SELESAI (aktual Strava, semua lari Zone 1-2) (±34 km, ±3.9 jam)",
+      "targetHours": 3.9,
+      "targetKm": 34.0,
       "isRecoveryWeek": true,
       "days": [
         {
-          "date": "2026-10-05",
+          "date": "2026-09-28",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w1-mon-strength",
-              "sport": "strength",
-              "type": "strength",
-              "name": "ST Upper Body + Core",
-              "description": "Kekuatan tubuh atas dan core untuk postur & stabilitas saat lelah.",
-              "durationMinutes": 30,
-              "primaryZone": "Strength",
-              "humanReadable": "Warm-up: 5 menit mobilitas bahu/thoracic + 1 set ringan\nMain (RIR 2-3): Push-up/bench press 2 x 8-10; Row (dumbbell/kabel) 2 x 10; Overhead press 2 x 8; Lat pulldown/pull-up 2 x 8; Plank 2 x 40 detik; Dead bug 2 x 10; Side plank 2 x 30 detik/sisi\nCool-down: peregangan dada & punggung 3 menit\nOpsional: Senin adalah hari off dari lari. Kalau badan capek, lewati ST ini dan istirahat penuh.\nMinggu pemulihan: beban ringan.",
-              "completed": false
-            }
-          ]
-        },
-        {
-          "date": "2026-10-06",
-          "dayOfWeek": "Tuesday",
-          "workouts": [
-            {
-              "id": "w1-tue-run",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run",
-              "description": "Lari aerobik santai untuk membangun volume.",
-              "durationMinutes": 37,
-              "primaryZone": "Zone 2",
-              "humanReadable": "Lari 6 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.",
-              "completed": false,
-              "distanceMeters": 6000
-            }
-          ]
-        },
-        {
-          "date": "2026-10-07",
-          "dayOfWeek": "Wednesday",
-          "workouts": [
-            {
-              "id": "w1-wed-strength",
-              "sport": "strength",
-              "type": "strength",
-              "name": "ST Lower Body + Betis",
-              "description": "Kekuatan kaki, pinggul, dan betis untuk daya tahan & pencegahan kram/cedera.",
-              "durationMinutes": 30,
-              "primaryZone": "Strength",
-              "humanReadable": "Warm-up: 5 menit jalan cepat/sepeda + mobilitas ankle & pinggul\nMain (beban moderat, sisakan 2-3 repetisi / RIR 2-3): Split squat 2 x 8/kaki; Romanian deadlift 2 x 8; Calf raise lutut lurus 2 x 12 (turun 3 detik); Soleus raise lutut ditekuk 2 x 12-15; Hip thrust 2 x 10; Copenhagen plank 2 x 20 detik/sisi\nCool-down: peregangan betis & hip flexor 3 menit\nFokus: penguatan betis/soleus (betis kiri atas sempat kram di HM). Jangan sampai gagal, besok ada sesi lari.\nMinggu pemulihan: beban ringan-moderat.",
-              "completed": false
-            }
-          ]
-        },
-        {
-          "date": "2026-10-08",
-          "dayOfWeek": "Thursday",
-          "workouts": [
-            {
-              "id": "w1-thu-run",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Lari aerobik santai untuk membangun volume.",
-              "durationMinutes": 39,
-              "primaryZone": "Zone 2",
-              "humanReadable": "Lari 6 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.\nAkhir sesi: 4 x 20 detik strides (akselerasi halus ~4:20-4:30/km), jalan/jog 45 detik di antara.",
-              "completed": false,
-              "distanceMeters": 6000
-            }
-          ]
-        },
-        {
-          "date": "2026-10-09",
-          "dayOfWeek": "Friday",
-          "workouts": [
-            {
-              "id": "w1-fri-rest",
+              "id": "w1-mon-rest",
               "sport": "rest",
               "type": "rest",
               "name": "Rest Day",
@@ -400,54 +345,122 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-10",
+          "date": "2026-09-29",
+          "dayOfWeek": "Tuesday",
+          "workouts": [
+            {
+              "id": "w1-tue-run",
+              "sport": "run",
+              "type": "recovery",
+              "name": "Recovery Run",
+              "description": "Lari pemulihan santai.",
+              "durationMinutes": 30,
+              "primaryZone": "Zone 1",
+              "humanReadable": "Aktual (Strava): 4,4 km dalam 30:00 (6:45/km). Lari pemulihan santai.",
+              "completed": true,
+              "distanceMeters": 4440
+            }
+          ]
+        },
+        {
+          "date": "2026-09-30",
+          "dayOfWeek": "Wednesday",
+          "workouts": [
+            {
+              "id": "w1-wed-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + 4 Strides",
+              "description": "Easy 6,0 km + 4 strides (0,55 km).",
+              "durationMinutes": 42,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Aktual (Strava): 6,6 km dalam 41:46 (6:22/km). Easy 6,0 km + 4 strides (0,55 km).",
+              "completed": true,
+              "distanceMeters": 6559
+            }
+          ]
+        },
+        {
+          "date": "2026-10-01",
+          "dayOfWeek": "Thursday",
+          "workouts": [
+            {
+              "id": "w1-thu-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest Day",
+              "description": "Istirahat penuh: tidur cukup, hidrasi, jalan santai boleh.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-02",
+          "dayOfWeek": "Friday",
+          "workouts": [
+            {
+              "id": "w1-fri-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Morning Run (Ledeng, berbukit)",
+              "description": "Rute berbukit (+129 m), pace lebih lambat.",
+              "durationMinutes": 40,
+              "primaryZone": "Zone 1-2",
+              "humanReadable": "Aktual (Strava): 5,0 km dalam 40:01 (7:59/km). Rute berbukit (+129 m), pace lebih lambat.",
+              "completed": true,
+              "distanceMeters": 5008
+            }
+          ]
+        },
+        {
+          "date": "2026-10-03",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
               "id": "w1-sat-run",
               "sport": "run",
               "type": "long",
-              "name": "Long Run",
+              "name": "Long Run 12 km",
               "description": "Long run pemulihan, santai.",
               "durationMinutes": 75,
               "primaryZone": "Zone 2",
-              "humanReadable": "Struktur (12 km):\n- 12 km Zone 2 @ 6:05-6:25/km\nUji fuel: 1 gel SiS di menit ~40, minum tiap ±15 menit.\nAturan: jangan jalan saat HR tinggi. Turunkan pace 10-15 detik/km, tetap lari sampai HR <170.",
-              "completed": false,
-              "distanceMeters": 12000
+              "humanReadable": "Aktual (Strava): 12,0 km dalam 75:08 (6:15/km). Long run pemulihan, santai.",
+              "completed": true,
+              "distanceMeters": 12010
             }
           ]
         },
         {
-          "date": "2026-10-11",
+          "date": "2026-10-04",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
               "id": "w1-sun-run",
               "sport": "run",
               "type": "recovery",
-              "name": "Recovery Run",
-              "description": "Lari pemulihan sangat santai, boleh diperlambat bila kaki berat.",
-              "durationMinutes": 32,
+              "name": "Sunday Running Date",
+              "description": "Lari santai bersama.",
+              "durationMinutes": 44,
               "primaryZone": "Zone 1",
-              "humanReadable": "Lari 5 km @ 6:30-6:50/km (HR <142). Cadence 178-182 spm, bahu dan lengan rileks.",
-              "completed": false,
-              "distanceMeters": 5000
+              "humanReadable": "Aktual (Strava): 6,0 km dalam 44:28 (7:24/km). Lari santai bersama.",
+              "completed": true,
+              "distanceMeters": 6004
             }
           ]
         }
       ],
       "summary": {
-        "totalHours": 4.0,
-        "totalKm": 29.0,
+        "totalHours": 3.9,
+        "totalKm": 34.0,
         "bySport": {
           "run": {
-            "sessions": 4,
-            "hours": 3.0,
-            "km": 29.0
+            "sessions": 5,
+            "hours": 3.9,
+            "km": 34.0
           },
           "strength": {
-            "sessions": 2,
-            "hours": 1.0,
+            "sessions": 0,
+            "hours": 0.0,
             "km": 0
           }
         }
@@ -455,8 +468,8 @@ ${a.join(`
     },
     {
       "weekNumber": 2,
-      "startDate": "2026-10-12",
-      "endDate": "2026-10-18",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-11",
       "phase": "Base",
       "focus": "Bangun kembali volume + stimulus ringan (±39 km, ±5.4 jam)",
       "targetHours": 5.4,
@@ -464,7 +477,7 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-10-12",
+          "date": "2026-10-05",
           "dayOfWeek": "Monday",
           "workouts": [
             {
@@ -481,7 +494,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-13",
+          "date": "2026-10-06",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
@@ -499,7 +512,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-14",
+          "date": "2026-10-07",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
@@ -516,7 +529,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-15",
+          "date": "2026-10-08",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
@@ -534,7 +547,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-16",
+          "date": "2026-10-09",
           "dayOfWeek": "Friday",
           "workouts": [
             {
@@ -552,7 +565,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-17",
+          "date": "2026-10-10",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
@@ -570,7 +583,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-18",
+          "date": "2026-10-11",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
@@ -607,8 +620,8 @@ ${a.join(`
     },
     {
       "weekNumber": 3,
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-25",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-18",
       "phase": "Base",
       "focus": "Volume naik ke ~46 km, mulai steady/sub-threshold (±46 km, ±6 jam)",
       "targetHours": 6.0,
@@ -616,7 +629,7 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-10-19",
+          "date": "2026-10-12",
           "dayOfWeek": "Monday",
           "workouts": [
             {
@@ -633,7 +646,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-20",
+          "date": "2026-10-13",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
@@ -651,7 +664,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-21",
+          "date": "2026-10-14",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
@@ -668,7 +681,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-22",
+          "date": "2026-10-15",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
@@ -686,7 +699,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-23",
+          "date": "2026-10-16",
           "dayOfWeek": "Friday",
           "workouts": [
             {
@@ -704,7 +717,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-24",
+          "date": "2026-10-17",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
@@ -722,7 +735,7 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-10-25",
+          "date": "2026-10-18",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
@@ -759,9 +772,161 @@ ${a.join(`
     },
     {
       "weekNumber": 4,
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-25",
+      "phase": "Build",
+      "focus": "Build pertama: threshold 4 x 2 km + fartlek, long run 18 km (±51 km, ±6.4 jam)",
+      "targetHours": 6.4,
+      "targetKm": 50.9,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-10-19",
+          "dayOfWeek": "Monday",
+          "workouts": [
+            {
+              "id": "w4-mon-strength",
+              "sport": "strength",
+              "type": "strength",
+              "name": "ST Upper Body + Core",
+              "description": "Kekuatan tubuh atas dan core untuk postur & stabilitas saat lelah.",
+              "durationMinutes": 35,
+              "primaryZone": "Strength",
+              "humanReadable": "Warm-up: 5 menit mobilitas bahu/thoracic + 1 set ringan\nMain (RIR 2-3): Push-up/bench press 3 x 8-10; Row (dumbbell/kabel) 3 x 10; Overhead press 3 x 8; Lat pulldown/pull-up 3 x 8; Plank 3 x 40 detik; Dead bug 3 x 10; Side plank 2 x 30 detik/sisi\nCool-down: peregangan dada & punggung 3 menit\nOpsional: Senin adalah hari off dari lari. Kalau badan capek, lewati ST ini dan istirahat penuh.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "dayOfWeek": "Tuesday",
+          "workouts": [
+            {
+              "id": "w4-tue-run",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Threshold 4 x 2 km",
+              "description": "Threshold: nyaman-keras, napas teratur, pace stabil di semua repetisi.",
+              "durationMinutes": 68,
+              "primaryZone": "Zone 4",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 4 x 2 km @ 4:55-5:00/km, jog santai 300 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179",
+              "completed": false,
+              "distanceMeters": 12400
+            }
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "dayOfWeek": "Wednesday",
+          "workouts": [
+            {
+              "id": "w4-wed-strength",
+              "sport": "strength",
+              "type": "strength",
+              "name": "ST Lower Body + Betis",
+              "description": "Kekuatan kaki, pinggul, dan betis untuk daya tahan & pencegahan kram/cedera.",
+              "durationMinutes": 40,
+              "primaryZone": "Strength",
+              "humanReadable": "Warm-up: 5 menit jalan cepat/sepeda + mobilitas ankle & pinggul\nMain (beban moderat, sisakan 2-3 repetisi / RIR 2-3): Split squat 3 x 8/kaki; Romanian deadlift 3 x 8; Calf raise lutut lurus 3 x 12 (turun 3 detik); Soleus raise lutut ditekuk 3 x 12-15; Hip thrust 3 x 10; Copenhagen plank 2 x 20 detik/sisi\nCool-down: peregangan betis & hip flexor 3 menit\nFokus: penguatan betis/soleus (betis kiri atas sempat kram di HM). Jangan sampai gagal, besok ada sesi lari.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "dayOfWeek": "Thursday",
+          "workouts": [
+            {
+              "id": "w4-thu-run",
+              "sport": "run",
+              "type": "fartlek",
+              "name": "Fartlek 8 x 2 menit",
+              "description": "Fartlek: kerja di atas threshold, volume moderat.",
+              "durationMinutes": 49,
+              "primaryZone": "Zone 4-5",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 8 x 2 menit @ 4:35-4:45/km, jog santai 90 detik di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR akhir repetisi 176-184",
+              "completed": false,
+              "distanceMeters": 8500
+            }
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "dayOfWeek": "Friday",
+          "workouts": [
+            {
+              "id": "w4-fri-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run + Strides",
+              "description": "Lari aerobik santai untuk membangun volume.",
+              "durationMinutes": 40,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Lari 6 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.\nAkhir sesi: 6 x 20 detik strides (akselerasi halus ~4:20-4:30/km), jalan/jog 45 detik di antara.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        },
+        {
+          "date": "2026-10-24",
+          "dayOfWeek": "Saturday",
+          "workouts": [
+            {
+              "id": "w4-sat-run",
+              "sport": "run",
+              "type": "long",
+              "name": "Long Run",
+              "description": "Long run aerobik 18 km + latihan fuel.",
+              "durationMinutes": 112,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Struktur (18 km):\n- 18 km Zone 2 @ 6:05-6:25/km\nLatihan fuel (target ~55 g karbo/jam): mulai gel di menit ~25, ulangi tiap ±30 menit (SiS Beta Fuel dan SiS Isotonic bergantian; cek gram karbo di label) + minum tiap ±15 menit. Latih perut untuk hari lomba.\nAturan: jangan jalan saat HR tinggi. Turunkan pace 10-15 detik/km, tetap lari sampai HR <170.",
+              "completed": false,
+              "distanceMeters": 18000
+            }
+          ]
+        },
+        {
+          "date": "2026-10-25",
+          "dayOfWeek": "Sunday",
+          "workouts": [
+            {
+              "id": "w4-sun-run",
+              "sport": "run",
+              "type": "recovery",
+              "name": "Recovery Run",
+              "description": "Lari pemulihan sangat santai, boleh diperlambat bila kaki berat.",
+              "durationMinutes": 39,
+              "primaryZone": "Zone 1",
+              "humanReadable": "Lari 6 km @ 6:30-6:50/km (HR <142). Cadence 178-182 spm, bahu dan lengan rileks.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 6.4,
+        "totalKm": 50.9,
+        "bySport": {
+          "run": {
+            "sessions": 5,
+            "hours": 5.1,
+            "km": 50.9
+          },
+          "strength": {
+            "sessions": 2,
+            "hours": 1.2,
+            "km": 0
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 5,
       "startDate": "2026-10-26",
       "endDate": "2026-11-01",
-      "phase": "Base",
+      "phase": "Build",
       "focus": "Deload: volume turun, sentuhan kecepatan singkat (±35 km, ±4.6 jam)",
       "targetHours": 4.6,
       "targetKm": 34.9,
@@ -772,7 +937,7 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w4-mon-strength",
+              "id": "w5-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -789,7 +954,7 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w4-tue-run",
+              "id": "w5-tue-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -807,7 +972,7 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w4-wed-strength",
+              "id": "w5-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -824,7 +989,7 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w4-thu-run",
+              "id": "w5-thu-run",
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max Ringan 6 x 400 m",
@@ -842,7 +1007,7 @@ ${a.join(`
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w4-fri-run",
+              "id": "w5-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
@@ -860,7 +1025,7 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w4-sat-run",
+              "id": "w5-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -878,7 +1043,7 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w4-sun-run",
+              "id": "w5-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -910,13 +1075,13 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 5,
+      "weekNumber": 6,
       "startDate": "2026-11-02",
       "endDate": "2026-11-08",
       "phase": "Build",
-      "focus": "Threshold + VO2max di atas volume ~53 km (±53 km, ±6.5 jam)",
+      "focus": "Threshold + VO2max di atas volume ~53 km; Selasa uji pace race 10K (go/no-go sub-48) (±53 km, ±6.5 jam)",
       "targetHours": 6.5,
-      "targetKm": 52.7,
+      "targetKm": 53.4,
       "isRecoveryWeek": false,
       "days": [
         {
@@ -924,7 +1089,7 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w5-mon-strength",
+              "id": "w6-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -941,16 +1106,16 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w5-tue-run",
+              "id": "w6-tue-run",
               "sport": "run",
               "type": "threshold",
-              "name": "Threshold 4 x 2 km",
-              "description": "Threshold: nyaman-keras, napas teratur, pace stabil di semua repetisi.",
-              "durationMinutes": 68,
+              "name": "Race-Pace Rehearsal 3 x 3 km",
+              "description": "Gladi pace race 10K: menentukan target sub-48:00 atau 48:30-49:00.",
+              "durationMinutes": 70,
               "primaryZone": "Zone 4",
-              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 4 x 2 km @ 4:55-5:00/km, jog santai 300 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 3 x 3 km @ 4:48-4:50/km, jog santai 300 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR ≤175, rep 3 boleh sampai 176\nKriteria lulus (go sub-48): selisih pace antar-repetisi ≤3 detik, HR rata-rata rep 3 ≤176, rasa ≤8/10. Lulus → target race sub-48:00. Belum lulus → target 48:30-49:00 (4:51-4:54/km). Jangan mengulang sesi ini di minggu race.",
               "completed": false,
-              "distanceMeters": 12400
+              "distanceMeters": 13100
             }
           ]
         },
@@ -959,7 +1124,7 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w5-wed-strength",
+              "id": "w6-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -976,7 +1141,7 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w5-thu-run",
+              "id": "w6-thu-run",
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max 6 x 800 m",
@@ -994,7 +1159,7 @@ ${a.join(`
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w5-fri-run",
+              "id": "w6-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1012,7 +1177,7 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w5-sat-run",
+              "id": "w6-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -1027,158 +1192,6 @@ ${a.join(`
         },
         {
           "date": "2026-11-08",
-          "dayOfWeek": "Sunday",
-          "workouts": [
-            {
-              "id": "w5-sun-run",
-              "sport": "run",
-              "type": "recovery",
-              "name": "Recovery Run",
-              "description": "Lari pemulihan sangat santai, boleh diperlambat bila kaki berat.",
-              "durationMinutes": 39,
-              "primaryZone": "Zone 1",
-              "humanReadable": "Lari 6 km @ 6:30-6:50/km (HR <142). Cadence 178-182 spm, bahu dan lengan rileks.",
-              "completed": false,
-              "distanceMeters": 6000
-            }
-          ]
-        }
-      ],
-      "summary": {
-        "totalHours": 6.5,
-        "totalKm": 52.7,
-        "bySport": {
-          "run": {
-            "sessions": 5,
-            "hours": 5.3,
-            "km": 52.7
-          },
-          "strength": {
-            "sessions": 2,
-            "hours": 1.2,
-            "km": 0
-          }
-        }
-      }
-    },
-    {
-      "weekNumber": 6,
-      "startDate": "2026-11-09",
-      "endDate": "2026-11-15",
-      "phase": "Build",
-      "focus": "Cruise intervals + fartlek, long run mulai finish di Zone 3 (±55 km, ±6.8 jam)",
-      "targetHours": 6.8,
-      "targetKm": 55.2,
-      "isRecoveryWeek": false,
-      "days": [
-        {
-          "date": "2026-11-09",
-          "dayOfWeek": "Monday",
-          "workouts": [
-            {
-              "id": "w6-mon-strength",
-              "sport": "strength",
-              "type": "strength",
-              "name": "ST Upper Body + Core",
-              "description": "Kekuatan tubuh atas dan core untuk postur & stabilitas saat lelah.",
-              "durationMinutes": 35,
-              "primaryZone": "Strength",
-              "humanReadable": "Warm-up: 5 menit mobilitas bahu/thoracic + 1 set ringan\nMain (RIR 2-3): Push-up/bench press 3 x 8-10; Row (dumbbell/kabel) 3 x 10; Overhead press 3 x 8; Lat pulldown/pull-up 3 x 8; Plank 3 x 40 detik; Dead bug 3 x 10; Side plank 2 x 30 detik/sisi\nCool-down: peregangan dada & punggung 3 menit\nOpsional: Senin adalah hari off dari lari. Kalau badan capek, lewati ST ini dan istirahat penuh.",
-              "completed": false
-            }
-          ]
-        },
-        {
-          "date": "2026-11-10",
-          "dayOfWeek": "Tuesday",
-          "workouts": [
-            {
-              "id": "w6-tue-run",
-              "sport": "run",
-              "type": "threshold",
-              "name": "Cruise Intervals 3 x 3 km",
-              "description": "Cruise: pace threshold dengan recovery pendek.",
-              "durationMinutes": 72,
-              "primaryZone": "Zone 4",
-              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 3 x 3 km @ 4:52-4:57/km, jog santai 400 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179",
-              "completed": false,
-              "distanceMeters": 13300
-            }
-          ]
-        },
-        {
-          "date": "2026-11-11",
-          "dayOfWeek": "Wednesday",
-          "workouts": [
-            {
-              "id": "w6-wed-strength",
-              "sport": "strength",
-              "type": "strength",
-              "name": "ST Lower Body + Betis",
-              "description": "Kekuatan kaki, pinggul, dan betis untuk daya tahan & pencegahan kram/cedera.",
-              "durationMinutes": 40,
-              "primaryZone": "Strength",
-              "humanReadable": "Warm-up: 5 menit jalan cepat/sepeda + mobilitas ankle & pinggul\nMain (beban moderat, sisakan 2-3 repetisi / RIR 2-3): Split squat 3 x 8/kaki; Romanian deadlift 3 x 8; Calf raise lutut lurus 3 x 12 (turun 3 detik); Soleus raise lutut ditekuk 3 x 12-15; Hip thrust 3 x 10; Copenhagen plank 2 x 20 detik/sisi\nCool-down: peregangan betis & hip flexor 3 menit\nFokus: penguatan betis/soleus (betis kiri atas sempat kram di HM). Jangan sampai gagal, besok ada sesi lari.",
-              "completed": false
-            }
-          ]
-        },
-        {
-          "date": "2026-11-12",
-          "dayOfWeek": "Thursday",
-          "workouts": [
-            {
-              "id": "w6-thu-run",
-              "sport": "run",
-              "type": "fartlek",
-              "name": "Fartlek 6 x 3 menit",
-              "description": "Kerja di atas threshold, volume moderat.",
-              "durationMinutes": 51,
-              "primaryZone": "Zone 4-5",
-              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 6 x 3 menit @ 4:35-4:45/km, jog santai 2 menit di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR akhir repetisi 176-184",
-              "completed": false,
-              "distanceMeters": 8900
-            }
-          ]
-        },
-        {
-          "date": "2026-11-13",
-          "dayOfWeek": "Friday",
-          "workouts": [
-            {
-              "id": "w6-fri-run",
-              "sport": "run",
-              "type": "easy",
-              "name": "Easy Run + Strides",
-              "description": "Lari aerobik santai untuk membangun volume.",
-              "durationMinutes": 46,
-              "primaryZone": "Zone 2",
-              "humanReadable": "Lari 7 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.\nAkhir sesi: 6 x 20 detik strides (akselerasi halus ~4:20-4:30/km), jalan/jog 45 detik di antara.",
-              "completed": false,
-              "distanceMeters": 7000
-            }
-          ]
-        },
-        {
-          "date": "2026-11-14",
-          "dayOfWeek": "Saturday",
-          "workouts": [
-            {
-              "id": "w6-sat-run",
-              "sport": "run",
-              "type": "long",
-              "name": "Long Run",
-              "description": "Long run 20 km dengan finish di Zone 3.",
-              "durationMinutes": 122,
-              "primaryZone": "Zone 2-3",
-              "humanReadable": "Struktur (20 km):\n- 17 km Zone 2 @ 6:05-6:25/km\n- 3 km Zone 3 (finish terkendali) @ 5:15-5:25/km\nLatihan fuel (target ~55 g karbo/jam): mulai gel di menit ~25, ulangi tiap ±30 menit (SiS Beta Fuel dan SiS Isotonic bergantian; cek gram karbo di label) + minum tiap ±15 menit. Latih perut untuk hari lomba.\nAturan: jangan jalan saat HR tinggi. Turunkan pace 10-15 detik/km, tetap lari sampai HR <170.",
-              "completed": false,
-              "distanceMeters": 20000
-            }
-          ]
-        },
-        {
-          "date": "2026-11-15",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
@@ -1197,13 +1210,13 @@ ${a.join(`
         }
       ],
       "summary": {
-        "totalHours": 6.8,
-        "totalKm": 55.2,
+        "totalHours": 6.5,
+        "totalKm": 53.4,
         "bySport": {
           "run": {
             "sessions": 5,
-            "hours": 5.5,
-            "km": 55.2
+            "hours": 5.3,
+            "km": 53.4
           },
           "strength": {
             "sessions": 2,
@@ -1215,12 +1228,172 @@ ${a.join(`
     },
     {
       "weekNumber": 7,
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "phase": "Build",
+      "focus": "Race week: mini-taper menuju 10K 15 Nov (target sub-48:00) (±41 km, ±4.9 jam)",
+      "targetHours": 4.9,
+      "targetKm": 40.8,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-11-09",
+          "dayOfWeek": "Monday",
+          "workouts": [
+            {
+              "id": "w7-mon-strength",
+              "sport": "strength",
+              "type": "strength",
+              "name": "ST Upper Body + Core",
+              "description": "Kekuatan tubuh atas dan core untuk postur & stabilitas saat lelah.",
+              "durationMinutes": 30,
+              "primaryZone": "Strength",
+              "humanReadable": "Warm-up: 5 menit mobilitas bahu/thoracic + 1 set ringan\nMain (RIR 2-3): Push-up/bench press 2 x 8-10; Row (dumbbell/kabel) 2 x 10; Overhead press 2 x 8; Lat pulldown/pull-up 2 x 8; Plank 2 x 40 detik; Dead bug 2 x 10; Side plank 2 x 30 detik/sisi\nCool-down: peregangan dada & punggung 3 menit\nOpsional: Senin adalah hari off dari lari. Kalau badan capek, lewati ST ini dan istirahat penuh.\nRace week: beban ringan, opsional. Kalau kaki terasa berat, lewati.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "dayOfWeek": "Tuesday",
+          "workouts": [
+            {
+              "id": "w7-tue-run",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Threshold Ringan 3 x 2 km",
+              "description": "Pertahankan intensitas, potong volume (mini-taper).",
+              "durationMinutes": 56,
+              "primaryZone": "Zone 4",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 3 x 2 km @ 4:50-4:55/km, jog santai 300 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179",
+              "completed": false,
+              "distanceMeters": 10100
+            }
+          ]
+        },
+        {
+          "date": "2026-11-11",
+          "dayOfWeek": "Wednesday",
+          "workouts": [
+            {
+              "id": "w7-wed-strength-1",
+              "sport": "strength",
+              "type": "strength",
+              "name": "ST Lower Body + Betis",
+              "description": "Kekuatan kaki, pinggul, dan betis untuk daya tahan & pencegahan kram/cedera.",
+              "durationMinutes": 30,
+              "primaryZone": "Strength",
+              "humanReadable": "Warm-up: 5 menit jalan cepat/sepeda + mobilitas ankle & pinggul\nMain (beban moderat, sisakan 2-3 repetisi / RIR 2-3): Split squat 2 x 8/kaki; Romanian deadlift 2 x 8; Calf raise lutut lurus 2 x 12 (turun 3 detik); Soleus raise lutut ditekuk 2 x 12-15; Hip thrust 2 x 10; Copenhagen plank 2 x 20 detik/sisi\nCool-down: peregangan betis & hip flexor 3 menit\nFokus: penguatan betis/soleus (betis kiri atas sempat kram di HM). Jangan sampai gagal, besok ada sesi lari.\nRace week: ringan, hindari pegal. Berhenti dengan 3 repetisi tersisa.",
+              "completed": false
+            },
+            {
+              "id": "w7-wed-run-2",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run",
+              "description": "Lari aerobik santai untuk membangun volume.",
+              "durationMinutes": 37,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Lari 6 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        },
+        {
+          "date": "2026-11-12",
+          "dayOfWeek": "Thursday",
+          "workouts": [
+            {
+              "id": "w7-thu-run",
+              "sport": "run",
+              "type": "steady",
+              "name": "Primer Pace Race 4 x 400 m",
+              "description": "Bangunkan kaki dan rasakan pace race, bukan sesi keras.",
+              "durationMinutes": 41,
+              "primaryZone": "Zone 4",
+              "humanReadable": "Warm-up: 2.5 km easy + 4 x 20 detik strides\nMain: 4 x 400 m @ 4:45-4:50/km, jog santai 200 m di antara repetisi (jangan berjalan)\nCool-down: 2 km easy\nPanduan HR: HR akhir repetisi 168-174",
+              "completed": false,
+              "distanceMeters": 6700
+            }
+          ]
+        },
+        {
+          "date": "2026-11-13",
+          "dayOfWeek": "Friday",
+          "workouts": [
+            {
+              "id": "w7-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest Day",
+              "description": "Istirahat penuh: tidur cukup, hidrasi, jalan santai boleh.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "dayOfWeek": "Saturday",
+          "workouts": [
+            {
+              "id": "w7-sat-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Shakeout + Strides",
+              "description": "Shakeout pra-race, sangat santai.",
+              "durationMinutes": 27,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Lari 4 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.\nAkhir sesi: 4 x 20 detik strides (akselerasi halus ~4:20-4:30/km), jalan/jog 45 detik di antara.\nShakeout pra-race: sangat santai. Siapkan perlengkapan, tidur cukup, makan karbo malam ini.",
+              "completed": false,
+              "distanceMeters": 4000
+            }
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "dayOfWeek": "Sunday",
+          "workouts": [
+            {
+              "id": "w7-sun-run",
+              "sport": "run",
+              "type": "race",
+              "name": "Race 10K (Target Sub-48:00)",
+              "description": "Race 10K 15 Nov: target sub-48:00 (4:47/km), rencana B 48:30-49:00.",
+              "durationMinutes": 74,
+              "primaryZone": "Zone 4-5",
+              "humanReadable": "Warm-up (mulai ±40 menit sebelum start): 2 km jog santai + 4 x 20 detik strides + dril ringan. Berhenti bergerak ±10 menit sebelum start.\nRace: 10 km, target 47:50 (rata-rata 4:47/km).\n- Km 1-2: 4:50. JANGAN lebih cepat dari 4:48. Di mass start 4:30-4:40 terasa ringan, itu jebakan yang membuat pace ambruk di paruh kedua.\n- Km 3-8: 4:47 stabil (HR 170-176).\n- Km 9-10: 4:44-4:45 bila HR ≤178 dan form masih rapi; 500 m terakhir lepas.\nRencana B (di km 3 HR sudah >175 atau pace terasa berat): lepas sub-48, kunci 4:51-4:54 → finish 48:30-49:00.\nAturan: jangan jalan. Bila HR >180, turunkan 5-10 detik/km tapi tetap lari.\nFuel: 1 gel isotonic ±15 menit sebelum start (opsional); minum sambil lari di water station. 48 menit tidak butuh gel di tengah.\nCool-down: 2 km jog santai + jalan 5 menit; makan dan minum dalam 30 menit.",
+              "completed": false,
+              "distanceMeters": 14000
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 4.9,
+        "totalKm": 40.8,
+        "bySport": {
+          "run": {
+            "sessions": 5,
+            "hours": 3.9,
+            "km": 40.8
+          },
+          "strength": {
+            "sessions": 2,
+            "hours": 1.0,
+            "km": 0
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 8,
       "startDate": "2026-11-16",
       "endDate": "2026-11-22",
       "phase": "Build",
-      "focus": "Puncak fase Build: threshold 10 km + VO2max 5 km (±57 km, ±6.8 jam)",
-      "targetHours": 6.8,
-      "targetKm": 56.8,
+      "focus": "Pulih dari race 10K lalu lanjut build: satu sesi kualitas + long run 20 km (±51 km, ±5.7 jam)",
+      "targetHours": 5.7,
+      "targetKm": 51.3,
       "isRecoveryWeek": false,
       "days": [
         {
@@ -1228,7 +1401,156 @@ ${a.join(`
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w7-mon-strength",
+              "id": "w8-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest Day",
+              "description": "Istirahat penuh: tidur cukup, hidrasi, jalan santai boleh.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "dayOfWeek": "Tuesday",
+          "workouts": [
+            {
+              "id": "w8-tue-run",
+              "sport": "run",
+              "type": "recovery",
+              "name": "Recovery Run",
+              "description": "Lari pemulihan sangat santai, boleh diperlambat bila kaki berat.",
+              "durationMinutes": 39,
+              "primaryZone": "Zone 1",
+              "humanReadable": "Lari 6 km @ 6:30-6:50/km (HR <142). Cadence 178-182 spm, bahu dan lengan rileks.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "dayOfWeek": "Wednesday",
+          "workouts": [
+            {
+              "id": "w8-wed-strength",
+              "sport": "strength",
+              "type": "strength",
+              "name": "ST Lower Body + Betis",
+              "description": "Kekuatan kaki, pinggul, dan betis untuk daya tahan & pencegahan kram/cedera.",
+              "durationMinutes": 30,
+              "primaryZone": "Strength",
+              "humanReadable": "Warm-up: 5 menit jalan cepat/sepeda + mobilitas ankle & pinggul\nMain (beban moderat, sisakan 2-3 repetisi / RIR 2-3): Split squat 2 x 8/kaki; Romanian deadlift 2 x 8; Calf raise lutut lurus 2 x 12 (turun 3 detik); Soleus raise lutut ditekuk 2 x 12-15; Hip thrust 2 x 10; Copenhagen plank 2 x 20 detik/sisi\nCool-down: peregangan betis & hip flexor 3 menit\nFokus: penguatan betis/soleus (betis kiri atas sempat kram di HM). Jangan sampai gagal, besok ada sesi lari.\nPasca-race: beban ringan.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-19",
+          "dayOfWeek": "Thursday",
+          "workouts": [
+            {
+              "id": "w8-thu-run",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Cruise Intervals 3 x 3 km",
+              "description": "Cruise: pace threshold dengan recovery pendek. Pace disesuaikan hasil race 10K.",
+              "durationMinutes": 72,
+              "primaryZone": "Zone 4",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 3 x 3 km @ 4:52-4:57/km, jog santai 400 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179\nHasil race ≥49:00 → pace 4:55-5:00. Hasil race ≤47:30 → pace 4:50-4:54.",
+              "completed": false,
+              "distanceMeters": 13300
+            }
+          ]
+        },
+        {
+          "date": "2026-11-20",
+          "dayOfWeek": "Friday",
+          "workouts": [
+            {
+              "id": "w8-fri-run",
+              "sport": "run",
+              "type": "easy",
+              "name": "Easy Run",
+              "description": "Lari aerobik santai untuk membangun volume.",
+              "durationMinutes": 37,
+              "primaryZone": "Zone 2",
+              "humanReadable": "Lari 6 km @ 6:05-6:25/km (HR 143-157). Cadence 178-182 spm, bahu dan lengan rileks.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        },
+        {
+          "date": "2026-11-21",
+          "dayOfWeek": "Saturday",
+          "workouts": [
+            {
+              "id": "w8-sat-run",
+              "sport": "run",
+              "type": "long",
+              "name": "Long Run",
+              "description": "Long run 20 km dengan finish di Zone 3.",
+              "durationMinutes": 122,
+              "primaryZone": "Zone 2-3",
+              "humanReadable": "Struktur (20 km):\n- 17 km Zone 2 @ 6:05-6:25/km\n- 3 km Zone 3 (finish terkendali) @ 5:15-5:25/km\nLatihan fuel (target ~55 g karbo/jam): mulai gel di menit ~25, ulangi tiap ±30 menit (SiS Beta Fuel dan SiS Isotonic bergantian; cek gram karbo di label) + minum tiap ±15 menit. Latih perut untuk hari lomba.\nAturan: jangan jalan saat HR tinggi. Turunkan pace 10-15 detik/km, tetap lari sampai HR <170.",
+              "completed": false,
+              "distanceMeters": 20000
+            }
+          ]
+        },
+        {
+          "date": "2026-11-22",
+          "dayOfWeek": "Sunday",
+          "workouts": [
+            {
+              "id": "w8-sun-run",
+              "sport": "run",
+              "type": "recovery",
+              "name": "Recovery Run",
+              "description": "Lari pemulihan sangat santai, boleh diperlambat bila kaki berat.",
+              "durationMinutes": 39,
+              "primaryZone": "Zone 1",
+              "humanReadable": "Lari 6 km @ 6:30-6:50/km (HR <142). Cadence 178-182 spm, bahu dan lengan rileks.",
+              "completed": false,
+              "distanceMeters": 6000
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 5.7,
+        "totalKm": 51.3,
+        "bySport": {
+          "run": {
+            "sessions": 5,
+            "hours": 5.2,
+            "km": 51.3
+          },
+          "strength": {
+            "sessions": 1,
+            "hours": 0.5,
+            "km": 0
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 9,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-29",
+      "phase": "Build",
+      "focus": "Puncak fase Build: threshold 10 km + VO2max 5 km (±57 km, ±6.8 jam)",
+      "targetHours": 6.8,
+      "targetKm": 56.8,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-11-23",
+          "dayOfWeek": "Monday",
+          "workouts": [
+            {
+              "id": "w9-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -1241,11 +1563,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-17",
+          "date": "2026-11-24",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w7-tue-run",
+              "id": "w9-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 5 x 2 km",
@@ -1259,11 +1581,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-18",
+          "date": "2026-11-25",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w7-wed-strength",
+              "id": "w9-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -1276,11 +1598,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-19",
+          "date": "2026-11-26",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w7-thu-run",
+              "id": "w9-thu-run",
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max 5 x 1000 m",
@@ -1294,11 +1616,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-20",
+          "date": "2026-11-27",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w7-fri-run",
+              "id": "w9-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1312,11 +1634,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-21",
+          "date": "2026-11-28",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w7-sat-run",
+              "id": "w9-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -1330,11 +1652,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-22",
+          "date": "2026-11-29",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w7-sun-run",
+              "id": "w9-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -1366,21 +1688,21 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 8,
-      "startDate": "2026-11-23",
-      "endDate": "2026-11-29",
+      "weekNumber": 10,
+      "startDate": "2026-11-30",
+      "endDate": "2026-12-06",
       "phase": "Build",
-      "focus": "Deload + benchmark 5K time trial (±42 km, ±5.2 jam)",
-      "targetHours": 5.2,
-      "targetKm": 41.5,
+      "focus": "Deload + kalibrasi pace dari hasil race 10K (±42 km, ±5.3 jam)",
+      "targetHours": 5.3,
+      "targetKm": 42.1,
       "isRecoveryWeek": true,
       "days": [
         {
-          "date": "2026-11-23",
+          "date": "2026-11-30",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w8-mon-strength",
+              "id": "w10-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -1393,11 +1715,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-24",
+          "date": "2026-12-01",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w8-tue-run",
+              "id": "w10-tue-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1411,11 +1733,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-25",
+          "date": "2026-12-02",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w8-wed-strength",
+              "id": "w10-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -1428,29 +1750,29 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-26",
+          "date": "2026-12-03",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w8-thu-run",
+              "id": "w10-thu-run",
               "sport": "run",
-              "type": "test",
-              "name": "5K Time Trial (Benchmark 1)",
-              "description": "Validasi fitness, zona, dan pace threshold setelah 8 minggu.",
-              "durationMinutes": 52,
-              "primaryZone": "Zone 4-5",
-              "humanReadable": "Warm-up: 2.5 km easy + 4 x 20 detik strides + 3 menit istirahat\nMain: 5 km time trial, target ≤23:00 (4:36/km)\nCool-down: 2 km easy\nMulai 4:36-4:40 di km 1, jangan lebih cepat; kalau terasa kuat, percepat di km 4-5. Catat waktu & HR rata-rata; hasilnya dipakai untuk menyesuaikan pace di fase Specific.",
+              "type": "threshold",
+              "name": "Threshold 3 x 2 km",
+              "description": "Threshold ringan (minggu deload). Pace dikalibrasi dengan hasil race 10K.",
+              "durationMinutes": 56,
+              "primaryZone": "Zone 4",
+              "humanReadable": "Warm-up: 2 km easy + 4 x 20 detik strides\nMain: 3 x 2 km @ 4:52-4:57/km, jog santai 300 m di antara repetisi (jangan berjalan)\nCool-down: 1.5 km easy\nPanduan HR: HR 166-178, jangan >179\nKalibrasi pace W11-W18 dari hasil race 10K 15 Nov: pace threshold ≈ pace race +6-8 detik/km; pace HM ≈ pace race +12-14 detik/km. Race ≥49:00 → naikkan semua pace threshold/HM di W11-W18 sebesar 3-5 detik/km. Race ≤47:30 → turunkan 2-3 detik/km.",
               "completed": false,
-              "distanceMeters": 9500
+              "distanceMeters": 10100
             }
           ]
         },
         {
-          "date": "2026-11-27",
+          "date": "2026-12-04",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w8-fri-run",
+              "id": "w10-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
@@ -1464,11 +1786,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-28",
+          "date": "2026-12-05",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w8-sat-run",
+              "id": "w10-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -1482,11 +1804,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-11-29",
+          "date": "2026-12-06",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w8-sun-run",
+              "id": "w10-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -1501,13 +1823,13 @@ ${a.join(`
         }
       ],
       "summary": {
-        "totalHours": 5.2,
-        "totalKm": 41.5,
+        "totalHours": 5.3,
+        "totalKm": 42.1,
         "bySport": {
           "run": {
             "sessions": 5,
-            "hours": 4.2,
-            "km": 41.5
+            "hours": 4.3,
+            "km": 42.1
           },
           "strength": {
             "sessions": 2,
@@ -1518,9 +1840,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 9,
-      "startDate": "2026-11-30",
-      "endDate": "2026-12-06",
+      "weekNumber": 11,
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-13",
       "phase": "Specific",
       "focus": "Mulai spesifik HM: threshold panjang + pace HM (±59 km, ±7 jam)",
       "targetHours": 7.0,
@@ -1528,11 +1850,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-11-30",
+          "date": "2026-12-07",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w9-mon-strength",
+              "id": "w11-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -1545,11 +1867,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-01",
+          "date": "2026-12-08",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w9-tue-run",
+              "id": "w11-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 4 x 2.5 km",
@@ -1563,11 +1885,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-02",
+          "date": "2026-12-09",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w9-wed-strength",
+              "id": "w11-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -1580,11 +1902,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-03",
+          "date": "2026-12-10",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w9-thu-run",
+              "id": "w11-thu-run",
               "sport": "run",
               "type": "hm-pace",
               "name": "HM-Pace Intervals 4 x 2 km",
@@ -1598,11 +1920,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-04",
+          "date": "2026-12-11",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w9-fri-run",
+              "id": "w11-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1616,11 +1938,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-05",
+          "date": "2026-12-12",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w9-sat-run",
+              "id": "w11-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -1634,11 +1956,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-06",
+          "date": "2026-12-13",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w9-sun-run",
+              "id": "w11-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -1670,9 +1992,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 10,
-      "startDate": "2026-12-07",
-      "endDate": "2026-12-13",
+      "weekNumber": 12,
+      "startDate": "2026-12-14",
+      "endDate": "2026-12-20",
       "phase": "Specific",
       "focus": "Threshold 2 x 5 km + long run dengan blok progresif (±59 km, ±7 jam)",
       "targetHours": 7.0,
@@ -1680,11 +2002,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-12-07",
+          "date": "2026-12-14",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w10-mon-strength",
+              "id": "w12-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -1697,11 +2019,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-08",
+          "date": "2026-12-15",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w10-tue-run",
+              "id": "w12-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 2 x 5 km",
@@ -1715,11 +2037,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-09",
+          "date": "2026-12-16",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w10-wed-strength",
+              "id": "w12-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -1732,11 +2054,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-10",
+          "date": "2026-12-17",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w10-thu-run",
+              "id": "w12-thu-run",
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max 5 x 1000 m",
@@ -1750,11 +2072,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-11",
+          "date": "2026-12-18",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w10-fri-run",
+              "id": "w12-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1768,11 +2090,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-12",
+          "date": "2026-12-19",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w10-sat-run",
+              "id": "w12-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -1786,11 +2108,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-13",
+          "date": "2026-12-20",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w10-sun-run",
+              "id": "w12-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -1822,9 +2144,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 11,
-      "startDate": "2026-12-14",
-      "endDate": "2026-12-20",
+      "weekNumber": 13,
+      "startDate": "2026-12-21",
+      "endDate": "2026-12-27",
       "phase": "Specific",
       "focus": "Tempo 12 km + long run dengan 10 km di pace HM (±59 km, ±6.9 jam)",
       "targetHours": 6.9,
@@ -1832,11 +2154,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-12-14",
+          "date": "2026-12-21",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w11-mon-strength",
+              "id": "w13-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -1849,11 +2171,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-15",
+          "date": "2026-12-22",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w11-tue-run",
+              "id": "w13-tue-run",
               "sport": "run",
               "type": "tempo",
               "name": "Tempo 12 km",
@@ -1867,11 +2189,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-16",
+          "date": "2026-12-23",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w11-wed-strength",
+              "id": "w13-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -1884,11 +2206,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-17",
+          "date": "2026-12-24",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w11-thu-run",
+              "id": "w13-thu-run",
               "sport": "run",
               "type": "fartlek",
               "name": "Fartlek 8 x 2 menit",
@@ -1902,11 +2224,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-18",
+          "date": "2026-12-25",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w11-fri-run",
+              "id": "w13-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -1920,11 +2242,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-19",
+          "date": "2026-12-26",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w11-sat-run",
+              "id": "w13-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run + HM-Pace Block",
@@ -1938,11 +2260,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-20",
+          "date": "2026-12-27",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w11-sun-run",
+              "id": "w13-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -1974,9 +2296,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 12,
-      "startDate": "2026-12-21",
-      "endDate": "2026-12-27",
+      "weekNumber": 14,
+      "startDate": "2026-12-28",
+      "endDate": "2027-01-03",
       "phase": "Specific",
       "focus": "Deload: volume turun, threshold ringan (±44 km, ±5.5 jam)",
       "targetHours": 5.5,
@@ -1984,11 +2306,11 @@ ${a.join(`
       "isRecoveryWeek": true,
       "days": [
         {
-          "date": "2026-12-21",
+          "date": "2026-12-28",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w12-mon-strength",
+              "id": "w14-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -2001,11 +2323,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-22",
+          "date": "2026-12-29",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w12-tue-run",
+              "id": "w14-tue-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2019,11 +2341,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-23",
+          "date": "2026-12-30",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w12-wed-strength",
+              "id": "w14-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -2036,11 +2358,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-24",
+          "date": "2026-12-31",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w12-thu-run",
+              "id": "w14-thu-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 3 x 2 km",
@@ -2054,11 +2376,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-25",
+          "date": "2027-01-01",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w12-fri-run",
+              "id": "w14-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run",
@@ -2072,11 +2394,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-26",
+          "date": "2027-01-02",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w12-sat-run",
+              "id": "w14-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -2090,11 +2412,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-27",
+          "date": "2027-01-03",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w12-sun-run",
+              "id": "w14-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -2126,9 +2448,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 13,
-      "startDate": "2026-12-28",
-      "endDate": "2027-01-03",
+      "weekNumber": 15,
+      "startDate": "2027-01-04",
+      "endDate": "2027-01-10",
       "phase": "Peak",
       "focus": "Puncak beban: threshold 12 km + long run dengan 2 blok pace HM (±60 km, ±6.9 jam)",
       "targetHours": 6.9,
@@ -2136,11 +2458,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2026-12-28",
+          "date": "2027-01-04",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w13-mon-strength",
+              "id": "w15-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -2153,11 +2475,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-29",
+          "date": "2027-01-05",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w13-tue-run",
+              "id": "w15-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 3 x 4 km",
@@ -2171,11 +2493,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-30",
+          "date": "2027-01-06",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w13-wed-strength",
+              "id": "w15-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -2188,11 +2510,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2026-12-31",
+          "date": "2027-01-07",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w13-thu-run",
+              "id": "w15-thu-run",
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max 5 x 1000 m",
@@ -2206,11 +2528,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-01",
+          "date": "2027-01-08",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w13-fri-run",
+              "id": "w15-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2224,11 +2546,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-02",
+          "date": "2027-01-09",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w13-sat-run",
+              "id": "w15-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run + HM-Pace Blocks",
@@ -2242,11 +2564,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-03",
+          "date": "2027-01-10",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w13-sun-run",
+              "id": "w15-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -2278,9 +2600,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 14,
-      "startDate": "2027-01-04",
-      "endDate": "2027-01-10",
+      "weekNumber": 16,
+      "startDate": "2027-01-11",
+      "endDate": "2027-01-17",
       "phase": "Peak",
       "focus": "Volume long run puncak 24 km + threshold 5 x 2 km (±59 km, ±6.9 jam)",
       "targetHours": 6.9,
@@ -2288,11 +2610,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2027-01-04",
+          "date": "2027-01-11",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w14-mon-strength",
+              "id": "w16-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -2305,11 +2627,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-05",
+          "date": "2027-01-12",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w14-tue-run",
+              "id": "w16-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Threshold 5 x 2 km",
@@ -2323,11 +2645,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-06",
+          "date": "2027-01-13",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w14-wed-strength",
+              "id": "w16-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -2340,11 +2662,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-07",
+          "date": "2027-01-14",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w14-thu-run",
+              "id": "w16-thu-run",
               "sport": "run",
               "type": "fartlek",
               "name": "Fartlek 10 x 1 menit",
@@ -2358,11 +2680,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-08",
+          "date": "2027-01-15",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w14-fri-run",
+              "id": "w16-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2376,11 +2698,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-09",
+          "date": "2027-01-16",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w14-sat-run",
+              "id": "w16-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -2394,11 +2716,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-10",
+          "date": "2027-01-17",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w14-sun-run",
+              "id": "w16-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -2430,9 +2752,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 15,
-      "startDate": "2027-01-11",
-      "endDate": "2027-01-17",
+      "weekNumber": 17,
+      "startDate": "2027-01-18",
+      "endDate": "2027-01-24",
       "phase": "Peak",
       "focus": "Konsolidasi pace HM, volume mulai turun (±51 km, ±6.1 jam)",
       "targetHours": 6.1,
@@ -2440,11 +2762,11 @@ ${a.join(`
       "isRecoveryWeek": false,
       "days": [
         {
-          "date": "2027-01-11",
+          "date": "2027-01-18",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w15-mon-strength",
+              "id": "w17-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -2457,11 +2779,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-12",
+          "date": "2027-01-19",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w15-tue-run",
+              "id": "w17-tue-run",
               "sport": "run",
               "type": "threshold",
               "name": "Cruise Intervals 3 x 3 km",
@@ -2475,11 +2797,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-13",
+          "date": "2027-01-20",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w15-wed-strength",
+              "id": "w17-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -2492,11 +2814,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-14",
+          "date": "2027-01-21",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w15-thu-run",
+              "id": "w17-thu-run",
               "sport": "run",
               "type": "hm-pace",
               "name": "HM-Pace Intervals 2 x 3 km",
@@ -2510,11 +2832,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-15",
+          "date": "2027-01-22",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w15-fri-run",
+              "id": "w17-fri-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2528,11 +2850,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-16",
+          "date": "2027-01-23",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w15-sat-run",
+              "id": "w17-sat-run",
               "sport": "run",
               "type": "long",
               "name": "Long Run",
@@ -2546,11 +2868,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-17",
+          "date": "2027-01-24",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w15-sun-run",
+              "id": "w17-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -2582,9 +2904,9 @@ ${a.join(`
       }
     },
     {
-      "weekNumber": 16,
-      "startDate": "2027-01-18",
-      "endDate": "2027-01-24",
+      "weekNumber": 18,
+      "startDate": "2027-01-25",
+      "endDate": "2027-01-31",
       "phase": "Peak",
       "focus": "Deload + benchmark 10K time trial (±33 km, ±4.2 jam)",
       "targetHours": 4.2,
@@ -2592,11 +2914,11 @@ ${a.join(`
       "isRecoveryWeek": true,
       "days": [
         {
-          "date": "2027-01-18",
+          "date": "2027-01-25",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w16-mon-strength",
+              "id": "w18-mon-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Upper Body + Core",
@@ -2609,11 +2931,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-19",
+          "date": "2027-01-26",
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w16-tue-run",
+              "id": "w18-tue-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2627,11 +2949,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-20",
+          "date": "2027-01-27",
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w16-wed-strength",
+              "id": "w18-wed-strength",
               "sport": "strength",
               "type": "strength",
               "name": "ST Lower Body + Betis",
@@ -2644,11 +2966,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-21",
+          "date": "2027-01-28",
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w16-thu-run",
+              "id": "w18-thu-run",
               "sport": "run",
               "type": "easy",
               "name": "Easy Run + Strides",
@@ -2662,11 +2984,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-22",
+          "date": "2027-01-29",
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w16-fri-rest",
+              "id": "w18-fri-rest",
               "sport": "rest",
               "type": "rest",
               "name": "Rest Day",
@@ -2676,15 +2998,15 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-23",
+          "date": "2027-01-30",
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w16-sat-run",
+              "id": "w18-sat-run",
               "sport": "run",
               "type": "test",
-              "name": "10K Time Trial (Benchmark 2)",
-              "description": "Benchmark fitness akhir blok. ≤47:30 menandakan jalur sub-1:45 HM; ≤46:30 = sangat kuat.",
+              "name": "10K Time Trial (Benchmark Akhir)",
+              "description": "Benchmark akhir blok; bandingkan dengan race 10K 15 Nov. ≤47:30 menandakan jalur sub-1:45 HM; ≤46:30 = sangat kuat.",
               "durationMinutes": 77,
               "primaryZone": "Zone 4-5",
               "humanReadable": "Warm-up: 2.5 km easy + 4 x 20 detik strides + 3 menit istirahat\nMain: 10 km time trial, target ≤47:30 (4:45/km)\nCool-down: 2 km easy\nMulai 4:47-4:50 di km 1-2, target negative split. Pakai 1 gel SiS di menit ~30 (latihan fuel). Catat waktu, split 5K pertama vs kedua, dan HR rata-rata.",
@@ -2694,11 +3016,11 @@ ${a.join(`
           ]
         },
         {
-          "date": "2027-01-24",
+          "date": "2027-01-31",
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w16-sun-run",
+              "id": "w18-sun-run",
               "sport": "run",
               "type": "recovery",
               "name": "Recovery Run",
@@ -2733,7 +3055,7 @@ ${a.join(`
   "raceStrategy": {
     "event": {
       "name": "HM Sub 1:45 (referensi untuk BTN JAKIM 2027)",
-      "date": "2027-01-24",
+      "date": "2027-01-30",
       "type": "half-marathon",
       "distances": {
         "run": 21.1
@@ -2759,7 +3081,7 @@ ${a.join(`
       "notes": "HM 27 Sep: 1 isotonic + 1 beta ≈ 60 g karbo (~33 g/jam). Target latihan ~55 g/jam, mis. 2 Beta Fuel + 1 Isotonic dalam ~105 menit (cek gram karbo di label). Uji di long run sejak W3."
     },
     "taper": {
-      "startDate": "2027-01-18",
+      "startDate": "2027-01-25",
       "volumeReduction": 45,
       "notes": "Ini bukan taper race sungguhan. Taper BTN JAKIM (10-14 hari) disusun setelah tanggal race diumumkan."
     }
